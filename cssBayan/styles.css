@@ -47,6 +47,15 @@ body{
     justify-content: center;
     max-height: 0;
     overflow: hidden;
+    transition: max-height 0.3s ease-in;
+}
+
+.opened .block-img{
+    max-height: 25vw;
+}
+
+.move-opened .block-img{
+    max-height: 25vw;
 }
 
 img{
