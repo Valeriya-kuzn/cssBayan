@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+}
+
+.block-img{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    max-width: 30%;
+}
