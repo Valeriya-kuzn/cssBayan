@@ -1,14 +1,14 @@
 +function() {
 
-    document.querySelector('.block').classList.add('opened')
+    document.querySelector('.block').classList.add('opened');
 
     document.querySelectorAll('.block').forEach(function(section) {
         section.addEventListener('click', function(e) {
             document.querySelectorAll('.block').forEach(function(section) {
-                section.classList.remove('opened')
+                section.classList.remove('opened');
             })
 
-            e.target.closest('.block').classList.add('opened')
+            e.target.closest('.block').classList.add('opened');
         })
     })
 
@@ -19,10 +19,24 @@
     document.querySelectorAll('.block').forEach(function(section) {
         section.addEventListener('mousemove', function(e) {
             document.querySelectorAll('.block').forEach(function(section) {
-                section.classList.remove('move-opened')
+                section.classList.remove('move-opened');
             })
 
-            e.target.closest('.block').classList.add('move-opened')
+            e.target.closest('.block').classList.add('move-opened');
+        })
+    })
+
+}()
+
++function() {
+
+    document.querySelectorAll('.wrapper').forEach(function(section) {
+        section.addEventListener('mousemove', function(e) {
+            document.querySelectorAll('.wrapper').forEach(function(section) {
+                section.classList.remove('move-icon-opened');
+            })            
+            
+            e.target.closest('.wrapper').classList.add('move-icon-opened');
         })
     })
 

@@ -2,7 +2,17 @@ body{
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    margin-bottom: 3%;
+    margin-bottom: 1%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: medium;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+h1{
+    font-size: large;
 }
 
 .wrapper{
@@ -40,6 +50,14 @@ body{
 
 .icon{
     max-width: 8%;
+    display: flex;
+    justify-content: right;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.move-icon-opened .icon{
+    max-height: 100%;
 }
 
 .block-img{
