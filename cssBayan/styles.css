@@ -2,22 +2,33 @@ body{
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    margin-bottom: 1%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 700;
     font-size: medium;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    cursor: pointer;
+    background-color: beige;
 }
 
 h1{
     font-size: large;
+    font-weight: 900;
+}
+
+img{
+    max-width: 20em;
+}
+
+.icon-img{
+    width: 2em;
+    height: 2em;
 }
 
 .wrapper{
     display: flex;
     flex-direction: column;
+    width: 70%;    
+    cursor: pointer;
 }
 
 @media (max-width:1200px){
@@ -29,6 +40,14 @@ h1{
 @media (max-width: 992px){
     .wrapper{
         max-width: 750px;
+        width: 90%;
+    }
+    .icon-img{
+        display: none;
+    }
+    img{
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -41,15 +60,26 @@ h1{
 .block{
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
 }
 
 .block-header{
     display: flex;
     justify-content: space-between;
+    margin: 1em 0 1em;
+}
+
+.move-icon-opened .block-header{
+    color: #007730;
+}
+
+.opened .block-header{
+    color: black;
 }
 
 .icon{
-    max-width: 8%;
+    max-width: 5em;
+    max-height: 5em;
     display: flex;
     justify-content: right;
     max-height: 0;
@@ -57,7 +87,15 @@ h1{
 }
 
 .move-icon-opened .icon{
-    max-height: 100%;
+    max-height: 5em;
+}
+
+.opened .icon{    
+    transform: scale(-1, 1);
+}
+
+.move-opened .icon{
+    transform: scale(-1, 1);
 }
 
 .block-img{
@@ -69,13 +107,9 @@ h1{
 }
 
 .opened .block-img{
-    max-height: 25vw;
+    max-height: 20em;
 }
 
 .move-opened .block-img{
-    max-height: 25vw;
-}
-
-img{
-    max-width: 30%;
+    max-height: 20em;
 }

@@ -30,13 +30,13 @@
 
 +function() {
 
-    document.querySelectorAll('.wrapper').forEach(function(section) {
+    document.querySelectorAll('.content').forEach(function(section) {
         section.addEventListener('mousemove', function(e) {
-            document.querySelectorAll('.wrapper').forEach(function(section) {
+            document.querySelectorAll('.content').forEach(function(section) {
                 section.classList.remove('move-icon-opened');
             })            
             
-            e.target.closest('.wrapper').classList.add('move-icon-opened');
+            e.target.closest('.content').classList.add('move-icon-opened');
         })
     })
 
