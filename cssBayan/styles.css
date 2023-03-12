@@ -8,7 +8,24 @@ body{
 .wrapper{
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+}
+
+@media (max-width:1200px){
+    .wrapper{
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 992px){
+    .wrapper{
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px){
+    .wrapper{
+        max-width: none;
+    }
 }
 
 .block{
@@ -16,9 +33,20 @@ body{
     flex-direction: column;
 }
 
+.block-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon{
+    max-width: 8%;
+}
+
 .block-img{
     display: flex;
     justify-content: center;
+    max-height: 0;
+    overflow: hidden;
 }
 
 img{
