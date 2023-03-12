@@ -4,7 +4,7 @@ body{
     margin: 0 auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 700;
-    font-size: medium;
+    font-size: large;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     background-color: beige;
@@ -41,6 +41,7 @@ img{
     .wrapper{
         max-width: 750px;
         width: 90%;
+        font-size: medium;
     }
 }
 
@@ -48,6 +49,7 @@ img{
     .wrapper{
         max-width: none;
         width: 90%;
+        font-size: small;
     }
     .icon-img{
         display: none;
