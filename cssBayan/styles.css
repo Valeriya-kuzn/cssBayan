@@ -31,6 +31,10 @@ img{
     cursor: pointer;
 }
 
+.content{    
+    color: #007730;
+}
+
 @media (max-width:1200px){
     .wrapper{
         max-width: 970px;
@@ -119,4 +123,30 @@ img{
 
 .move-opened .block-img{
     max-height: 20em;
+}
+
+@media (hover: hover){
+    .block:hover .block-img{
+        max-height: 20em;
+    }
+
+    .block:hover .icon{
+        transform: scale(-1, 1);
+    }
+
+    .content:hover .block-header{
+        color: black;
+    }
+
+    .content:hover .icon{
+        max-height: 5em;
+    }
+}
+
+.block:checked .icon{
+    transform: scale(-1, 1);
+}
+
+.block:checked .block-header{
+    color: black;
 }
