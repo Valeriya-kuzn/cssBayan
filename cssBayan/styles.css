@@ -25,47 +25,17 @@ img{
 }
 
 .icon-img{
-    height: 2em;
+    max-height: 2em;
 }
 
 .wrapper{
     display: flex;
     flex-direction: column;
-    width: 70%;    
     cursor: pointer;
 }
 
 .content{    
     color: #007730;
-}
-
-@media (max-width:1200px){
-    .wrapper{
-        max-width: 970px;
-    }
-}
-
-@media (max-width: 992px){
-    .wrapper{
-        max-width: 750px;
-        width: 90%;
-        font-size: medium;
-    }
-}
-
-@media (max-width: 600px){
-    .wrapper{
-        max-width: none;
-        width: 90%;
-        font-size: small;
-    }
-    .icon-img{
-        display: none;
-    }
-    img{
-        width: 100%;
-        height: auto;
-    }
 }
 
 .block{
@@ -75,17 +45,17 @@ img{
 }
 
 .header{
-    height: 2em;
+    min-height: 2em;
 }
 
 .block-header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 2em 0 1em;
 }
 
 .icon{
-    max-height: 3em;
     display: flex;
     justify-content: right;
     max-height: 0;
@@ -97,12 +67,12 @@ img{
     justify-content: center;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in;
 }
 
 @media (hover: hover){
     .block:hover .block-img{
         max-height: 20em;
+        transition: max-height 0.3s ease-in;
     }
 
     .block:hover .icon{
@@ -130,4 +100,55 @@ input{
 
 .header-input:checked + .block-header{
     color: black;
+}
+
+.content:active .block-img{
+    cursor:grabbing;
+}
+
+.block:active .block-header{
+    color: gray;
+}
+
+.block:active .icon{
+    filter: opacity(50%);
+}
+
+
+@media (max-width:1200px){
+    .wrapper{
+        width: 80%;
+    }
+}
+
+@media (max-width: 992px){
+    .wrapper{
+        width: 90%;
+        font-size: medium;
+    }
+}
+
+@media (max-width: 600px){
+    .wrapper{
+        max-width: none;
+        width: 90%;
+        font-size: small;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .icon-img{
+        width: 2em;
+        height: 2em;
+    }
+    .block-header{
+        flex-grow: 1;
+        align-items: center;
+    }
+    .icon{
+        overflow: visible;
+        max-height: 2em;
+        margin-left: 0.5em;
+    }
 }
