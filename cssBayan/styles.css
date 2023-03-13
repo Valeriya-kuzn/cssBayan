@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: large;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background-color: beige;
+}
+
+h1{
+    font-size: large;
+    font-weight: 900;
+    margin: 3em 0 1em 0;
+}
+
+img{
+    max-width: 20em;
+}
+
+.icon-img{
+    max-height: 2em;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.content{    
+    color: #007730;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.header{
+    min-height: 2em;
+}
+
+.block-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 0 1em;
+}
+
+.icon{
+    display: flex;
+    justify-content: right;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.block-img{
+    display: flex;
+    justify-content: center;
+    max-height: 0;
+    overflow: hidden;
+}
+
+@media (hover: hover){
+    .block:hover .block-img{
+        max-height: 20em;
+        transition: max-height 0.3s ease-in;
+    }
+
+    .block:hover .icon{
+        transform: scale(-1, 1);
+    }
+
+    .content:hover .block-header{
+        color: black;
+        cursor: pointer;
+    }
+
+    .content:hover .icon{
+        max-height: 3em;
+    }
+}
+
+input{
+    height: 0;
+    width: 0;
+}
+
+.header-input:checked ~ .block-img{
+    max-height: 20em;
+}
+
+.header-input:checked + .block-header{
+    color: black;
+}
+
+.content:active .block-img{
+    cursor:grabbing;
+}
+
+.block:active .block-header{
+    color: gray;
+}
+
+.block:active .icon{
+    filter: opacity(50%);
+}
+
+
+@media (min-width:993px){
+    .wrapper{
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px){
+    .wrapper{
+        width: 90%;
+        font-size: medium;
+    }
+}
+
+@media (max-width: 600px){
+    .wrapper{
+        max-width: none;
+        width: 90%;
+        font-size: small;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .icon-img{
+        width: 2em;
+        height: 2em;
+    }
+    .block-header{
+        flex-grow: 1;
+        align-items: center;
+    }
+    .icon{
+        overflow: visible;
+        max-height: 2em;
+        margin-left: 0.5em;
+    }
+}
