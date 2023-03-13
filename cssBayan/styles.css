@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -13,6 +17,7 @@ body{
 h1{
     font-size: large;
     font-weight: 900;
+    margin: 3em 0 1em 0;
 }
 
 img{
@@ -20,7 +25,6 @@ img{
 }
 
 .icon-img{
-    width: 2em;
     height: 2em;
 }
 
@@ -70,43 +74,22 @@ img{
     flex: 1 1 auto;
 }
 
+.header{
+    height: 2em;
+}
+
 .block-header{
     display: flex;
     justify-content: space-between;
-    margin: 1em 0 1em;
-}
-
-.move-icon-opened .block-header{
-    color: #007730;
-}
-
-.opened .block-header{
-    color: black;
-}
-
-.move-opened .block-header{
-    color: black;
+    margin: 2em 0 1em;
 }
 
 .icon{
-    max-width: 5em;
-    max-height: 5em;
+    max-height: 3em;
     display: flex;
     justify-content: right;
     max-height: 0;
     overflow: hidden;
-}
-
-.move-icon-opened .icon{
-    max-height: 5em;
-}
-
-.opened .icon{    
-    transform: scale(-1, 1);
-}
-
-.move-opened .icon{
-    transform: scale(-1, 1);
 }
 
 .block-img{
@@ -115,14 +98,6 @@ img{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in;
-}
-
-.opened .block-img{
-    max-height: 20em;
-}
-
-.move-opened .block-img{
-    max-height: 20em;
 }
 
 @media (hover: hover){
@@ -136,17 +111,23 @@ img{
 
     .content:hover .block-header{
         color: black;
+        cursor: pointer;
     }
 
     .content:hover .icon{
-        max-height: 5em;
+        max-height: 3em;
     }
 }
 
-.block:checked .icon{
-    transform: scale(-1, 1);
+input{
+    height: 0;
+    width: 0;
 }
 
-.block:checked .block-header{
+.header-input:checked ~ .block-img{
+    max-height: 20em;
+}
+
+.header-input:checked + .block-header{
     color: black;
 }
